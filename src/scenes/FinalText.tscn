@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scripts/FinalText.gd" type="Script" id=1]
+
+[node name="FinalText" type="CenterContainer"]
+margin_right = 256.0
+margin_bottom = 144.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 59.0
+margin_top = 63.0
+margin_right = 197.0
+margin_bottom = 80.0
+text = "Test sroce"
+
+[node name="FinalTextTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="FinalTextTimer" to="." method="_on_FinalTextTimer_timeout"]
